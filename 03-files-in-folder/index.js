@@ -10,7 +10,7 @@ fs.readdir(path.join(__dirname, 'secret-folder'), (err, files) => {
         let kb = path.extname(files[i]).split('.').join('');
         let abs = files[i].split('.');
         let nameFile = abs.slice(0, (abs.length - 1)).join('.') + '';
-        console.log(nameFile, '-', kb, '-', Math.floor(stat.size / 1024).toFixed(3) + 'kb');
+        console.log(nameFile, '-', kb, '-', (stat.size / 1024).toFixed(3) + 'kb');
       }
     });
   }
